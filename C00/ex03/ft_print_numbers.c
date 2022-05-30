@@ -1,19 +1,33 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/27 23:17:34 by dolvin17          #+#    #+#             */
+/*   Updated: 2022/05/29 03:28:43 by dolvin17         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
- void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-	char i;
-	
-	i = '0';
-	
-	while (i <= '9')
-	{	
-		write(1, &i, 1);
-		i++;
+	char	n;
+	char	x;
+
+	x = '9';
+	n = '0';
+	while (n <= x)
+	{
+		write(1, &n, 1);
+		n++;
 	}
 }
-int main(void)
+/*
+int	main(void)
 {
 	ft_print_numbers();
-}
+	return (0);
+}*/
