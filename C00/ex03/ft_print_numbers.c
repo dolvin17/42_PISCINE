@@ -6,12 +6,12 @@
 /*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 23:17:34 by dolvin17          #+#    #+#             */
-/*   Updated: 2022/05/29 03:28:43 by dolvin17         ###   ########.fr       */
+/*   Updated: 2022/05/30 05:32:28 by dolvin17         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+/* print digits*/
 void	ft_print_numbers(void)
 {
 	char	n;
