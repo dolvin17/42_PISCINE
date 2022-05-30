@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/27 23:48:36 by dolvin17          #+#    #+#             */
+/*   Updated: 2022/05/30 05:35:05 by dolvin17         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_print_comb(void)
 {
@@ -16,20 +27,21 @@ void	ft_print_comb(void)
 			k = j + 1;
 			while (k <= '9')
 			{
-				write (1, &i, 1);
-				write (1, &j, 1);
-				write (1, &k, 1);
+				write(1, &i, 1);
+				write(1, &j, 1);
+				write(1, &k, 1);
 				if (!(i == '7' && j == '8' && k == '9'))
-					write (1, ", ", 2);
+					write(1, ", ", 2);
 			k++;
 			}
-		++j;
+		j++;
 		}
-	++i;
+	i++;
 	}
-}	
-int main(void)
-{
-	ft_print_comb();
-	return (0);
 }
+/*
+int    main(void)
+{
+    ft_print_comb( );
+    return (0);
+}*/
