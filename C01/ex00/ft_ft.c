@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/30 15:47:01 by dolvin17          #+#    #+#             */
+/*   Updated: 2022/05/30 16:46:12 by dolvin17         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-void    ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
-    *nbr = 42;
+	*nbr = 42;
 }
-int main(void)
+/*
+int	main(void)
 {
-    int i;
-    int *nbr;
+	int n;
+	int *nbr;
 
-    i = 5;
-    nbr = &i;
-
-    printf("variable: %d\n", i);
-    ft_ft(nbr);
-    printf("pointer: %d\n", i);
-    return(0);
-}
+	n = 64;
+	nbr = &n;
+	printf("var: %d\n", n);
+	ft_ft(nbr);
+	printf("pointer: %d\n", n);
+	return (0);
+}*/
