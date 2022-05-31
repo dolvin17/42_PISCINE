@@ -1,27 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/30 22:23:12 by dolvin17          #+#    #+#             */
+/*   Updated: 2022/05/31 01:59:27 by dolvin17         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
- char *ft_strncpy(char *dest, char *src, unsigned int n)
- {
-    unsigned int    i;
+#include <string.h>
 
-    i = 0;
-    while(i < n && src[i] != '\0') 
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    while (i < n)
-    {
-        dest[i] = '\0';
-        i++;
-    }
-    return(dest);
- }
-int	main(void)
+int	ft_strlen(const char *s)
 {
-	char	dest[10]  ="DESTINO";
-	char	src[10]  = "FUENTE";
+	int	len;
 
-	ft_strncpy(dest, src, 3);
-	printf("%s", dest);
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
+char	*ft_strncpy(char *dest, const char *source, unsigned int n)
+{
+	int	i;
+	int	buffer;
+	int	j;
+
+	i = 0;
+	buffer = ft_strlen(source);
+	buffer = n - 1;
+	while (buffer >= i && source[i] != '\0')
+	{
+		j = 0;
+		dest[i] = source[i];
+		i++;
+		if (source[i] < dest[i])
+		dest[i] = j++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+/*int	main(void)
+{
+	char	str[]="testeando code";
+	char	dst[]="xxxxxxxxxx";
+
+	strncpy(dst, str, 3);
+	printf("%s %d\n", dst, ft_strlen(dst));
+	ft_strncpy(dst, str, 3);
+	printf("%s %d\n", dst, ft_strlen(dst));
 	return (0);
 }
+*/
