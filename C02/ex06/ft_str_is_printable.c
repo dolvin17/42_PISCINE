@@ -1,21 +1,31 @@
-#include <stdio.h>
-int ft_str_is_printable(char *str)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dolvin17 <grks_17@hotmail.com>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/31 21:03:32 by dolvin17          #+#    #+#             */
+/*   Updated: 2022/05/31 23:19:47 by dolvin17         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while(str[i])
-    {
-        if (str[i] >= 32 && str[i] <= 126)
-                ;
-        else
-            return(0);
-        i++;
-    }
-    return(1);
-}/*
-int main(void)
+#include <stdio.h>
+
+int	ft_str_is_printable(char *str)
 {
-    printf("%d\n", ft_str_is_printable("\t"));
-    printf("%d\n", ft_str_is_printable("abcDEF0123"));
-}*/
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (1);
+	while (str[i])
+	{
+		if (str[i] >= ' ' && str[i] <= '~')
+			;
+		else
+			return (0);
+		i++;
+	}
+	return (1);
+}
